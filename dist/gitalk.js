@@ -6829,7 +6829,7 @@ var GitalkComponent = function (_Component) {
         id: replacedUrl
       }, props.options);
 
-      _util.axiosJSON.post(_this.options.proxy + code).then(function (res) {
+      _util.axiosJSON.get(_this.options.proxy + code).then(function (res) {
         if (res.data && res.data.access_token) {
           _this.accessToken = res.data.access_token;
 
