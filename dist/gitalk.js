@@ -6830,8 +6830,8 @@ var GitalkComponent = function (_Component) {
       }, props.options);
 
       _util.axiosJSON.get(_this.options.proxy + code).then(function (res) {
-        if (res.data && res.data.access_token) {
-          _this.accessToken = res.data.access_token;
+        if (res.data && res.data.token) {
+          _this.accessToken = res.data.token;
 
           _this.getInit().then(function () {
             return _this.setState({ isIniting: false });
